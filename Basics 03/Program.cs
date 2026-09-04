@@ -1,27 +1,21 @@
-﻿#region 9st answer
-/*Write a method PrintFirstBook() that prints the first book in the books array. 
-*If the array is empty,use return to exit the method early instead of printing anything.*/
+﻿
+#region 10st answer
+//Create a Book class with a Title(string) and Pages(int). Create a Book object and store it 
+//in a variable of type object. Print it. 
 #endregion
-using System;
-
-namespace MyApp
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-      
-        static void Main(string[] args)
-        {
-            string[] books = { "Clean Code", "The Pragmatic Programmer", "Refactoring" };
-            PrintFirstBook(books);
-        }
-
-        static void PrintFirstBook(string[] books)
-        {
-            if (books.Length == 0)
-            {
-                return;
-            }
-            Console.WriteLine(books[0]);
-        }
+        Book book = new Book();
+        book.title = "Math";
+        book.pages = 10;
+        Console.WriteLine(book.title);
+        Console.WriteLine(book.pages);
     }
+}
+class Book
+{
+    public string title;
+    public int pages;
 }
