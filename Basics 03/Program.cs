@@ -1,18 +1,26 @@
-﻿#region 12st answer
-//Look at the line below. Is it a compile-time error, a runtime error, or a logical error? Fix it. 
-//int pages = "464";
-//Compile - time error — you can't put text (string) into an int variable. 
-//int pages = 464;
+﻿#region 13st answer
+//Write code that divides 10 by 0 inside a try block, catches the exception, prints "Cannot 
+//divide by zero", and then prints "Done" in a finally block. 
 #endregion
+using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-
-        int pages = 464;
-        //this is a compile-time error ,we can't put text into an int variable.
-        //the solution is to remove the quotes.
-
+        try
+        {
+            int num1 = 10;
+            int num2 = 0;
+            int result = num1 / num2;
+        }
+        catch (DivideByZeroException)
+        {
+            Console.WriteLine("Cannot divide by zero");
+        }
+        finally
+        {
+            Console.WriteLine("Done");
+        }
     }
 }
